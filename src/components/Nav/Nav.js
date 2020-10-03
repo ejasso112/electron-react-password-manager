@@ -9,18 +9,17 @@ const Nav = (props) => {
         <nav className={`nav`}>
             <div className={`nav__container`} />
                 <div className={`nav__main`}>
-                    <div className={`nav__search`}>
+                    <div className={`nav__group`}>
+                        <div className={`nav__search`}>
+                            <input className={`nav__search__bar`} type="text" placeholder="Search" />
+                        </div>
+                        <CardNavLink to='/' svg={Svgs.Lock} name='Passwords' isActive={path === '/'} />
+                        <CardNavLink to='/password-generator' svg={Svgs.LockAdd} name='Password Generator' isActive={path === '/password-generator'} />
                     </div>
-                    <div className={`nav__links`}>
-                        <div className={`nav__manage`}>
-                            <CardNavLink to='/' svg={Svgs.Lock} name='Passwords' isActive={path === '/'} />
-                            <CardNavLink to='/password-generator' svg={Svgs.LockAdd} name='Password Generator' isActive={path === '/password-generator'} />
-                        </div>
-                        <div className={`nav__tools`}>
-                            <CardNavLink to='/import' svg={Svgs.Import} name='Import' isActive={path === '/import'} />
-                            <CardNavLink to='/export' svg={Svgs.Export} name='Export' isActive={path === '/export'} />
-                            <CardNavLink to='/settings' svg={Svgs.Settings} name='Settings' isActive={path === '/settings'} />
-                        </div>
+                    <div className={`nav__group`}>
+                        <CardNavLink to='/import' svg={Svgs.Import} name='Import' isActive={path === '/import'} />
+                        <CardNavLink to='/export' svg={Svgs.Export} name='Export' isActive={path === '/export'} />
+                        <CardNavLink to='/settings' svg={Svgs.Settings} name='Settings' isActive={path === '/settings'} />
                     </div>
                 </div>
                 <div className={`nav__foot`}>
