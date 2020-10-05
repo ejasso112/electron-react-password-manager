@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Nav from './components/Nav/Nav'
-import Passwords from './pages/Passwords/Passwords';
+import Views from './Views/Views'
 import './App.scss'
 
 const App = () => {
@@ -9,7 +9,7 @@ const App = () => {
         <main className={`main`}>
             <Router>
                 <Route path='/' component={Nav} />
-                <Route path='/' exact component={Passwords} />
+                <Route path='/' component={Views} />
             </Router>
         </main>
 

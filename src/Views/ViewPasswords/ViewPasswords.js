@@ -4,13 +4,13 @@ import BlockPasswordsGrid from '../../components/Blocks/BlockPasswordsGrid/Block
 import Svgs from '../../data/svg'
 import data from '../../data/passwords.json'
 
-import './Passwords.scss'
+import './ViewPasswords.scss'
 
-const Passwords = (props) => {
+const ViewPasswords = (props) => {
     return (
-        <div className={`passwords`}>
-            <div className={`passwords__menu`}>
-                <div className={`passwords__menu__group`}>
+        <div className={`viewPasswords`}>
+            <div className={`viewPasswords__menu`}>
+                <div className={`viewPasswords__menu__group`}>
                     <CardButton primary svg={Svgs.Add} name='Add New' />
                     <CardButton svg={Svgs.Import} name='Import' />
                     <CardButton svg={Svgs.Export} name='Export' />
@@ -21,4 +21,4 @@ const Passwords = (props) => {
     )
 }
 
-export default Passwords
+export default ViewPasswords
