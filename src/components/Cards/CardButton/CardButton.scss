@@ -1,11 +1,11 @@
 @import '../../../globalVariables.scss';
 
 .cardButton {
-    padding: 8px 18px;
+    padding: 0 14px;
+    height: 42px;
     display: flex;
     align-items: center;
-    border-radius: 12px;
-    margin: 12px 0;
+    border-radius: 16px;
 
     &__svgWrapper {
         width: 16px;
