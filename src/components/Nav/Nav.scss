@@ -5,7 +5,8 @@
     width: 256px;
     height: 100vh;
     overflow: hidden;
-
+    flex-shrink: 0;
+    
     &__container {
         position: absolute;
         top:-15px;
