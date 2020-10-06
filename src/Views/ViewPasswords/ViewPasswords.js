@@ -8,7 +8,7 @@ import './ViewPasswords.scss'
 
 const ViewPasswords = (props) => {
     return (
-        <div className={`viewPasswords`}>
+        <article className={`viewPasswords`}>
             <div className={`viewPasswords__menu`}>
                 <div className={`viewPasswords__menu__group`}>
                     <CardButton primary svg={Svgs.Add} name='Add New' />
@@ -16,8 +16,8 @@ const ViewPasswords = (props) => {
                     <CardButton svg={Svgs.Export} name='Export' />
                 </div>
             </div>
-            <BlockPasswordsGrid data={data} />
-        </div>
+            <BlockPasswordsGrid data={data} activeId={props.match.params.id}/>
+        </article>
     )
 }
 
