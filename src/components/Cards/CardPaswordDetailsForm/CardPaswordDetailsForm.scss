@@ -1,0 +1,23 @@
+.cardPaswordDetailsForm {
+    padding: 64px 32px;
+
+    &__group {
+        padding-bottom: 24px;
+    }
+
+    &__item {
+        margin-bottom: 18px;
+    }
+
+    &__label {
+        display: inline-block;
+        width: 128px;
+        text-align: right;
+        color: rgba($color: #000000, $alpha: .8);
+        font-weight: 500;
+    }
+
+    &__textField {
+        margin-left: 20px;
+    }
+}
