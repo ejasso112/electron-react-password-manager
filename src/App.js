@@ -1,17 +1,24 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import Nav from './components/Nav/Nav'
-import Views from './Views/Views'
-import './App.scss'
+
+import ViewNav from './views/ViewNav'
+import ViewPasswords from './views/ViewPasswords'
+import ManagePassword from './components/ManagePassword'
+
+import PassVaultContextProvider from './contexts/PassVaultContext';
+import './styles/_App.scss'
 
 const App = () => {
     return (
-        <main className={`main`}>
+        <React.Fragment className={`main`}>
             <Router>
-                <Route path='/' component={Nav} />
-                <Route path='/' component={Views} />
+                <PassVaultContextProvider>
+                    <Route path='/' component={ViewNav} />
+                    <Route path={['/', '/password/:id']} exact component={ViewPasswords} />
+                    <Route path='/password/:id' exact component={ManagePassword} />
+                </PassVaultContextProvider>
             </Router>
-        </main>
+        </React.Fragment>
 
     )
 }
