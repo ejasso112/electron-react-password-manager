@@ -10,7 +10,7 @@ import './styles/_App.scss'
 
 const App = () => {
     return (
-        <React.Fragment className={`main`}>
+        <React.Fragment>
             <Router>
                 <PassVaultContextProvider>
                     <Route path='/' component={ViewNav} />

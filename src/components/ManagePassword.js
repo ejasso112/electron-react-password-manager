@@ -20,7 +20,7 @@ const ManagePassword = (props) => {
                 <div className={`passwordDetails__exit__content`}></div>
             </Link>
             <ManagePasswordHeader color={passwordInfo.color} svg={passwordInfo.svg} urlSvg={passwordInfo.urlSvg} name={passwordInfo.name} />
-            <ManagePasswordForm />
+            <ManagePasswordForm passwordInfo={passwordInfo} key={passwordId}/>
         </article>
     )
 }
