@@ -21,7 +21,7 @@ const PasswordCardList = (props) => {
                 <SVG className={`passwordCardList__svg`} />}
             </div>
             <div className={`passwordCardList__content`}>
-                <h3 className={`passwordCardList__website`}>{website}</h3>
+                <h3 className={`passwordCardList__name`}>{name}</h3>
                 <p className={`passwordCardList__email`}>{email}</p>
             </div>
         </Link>

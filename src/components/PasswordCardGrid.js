@@ -20,7 +20,7 @@ const PasswordCardGrid = (props) => {
                 <img className={`passwordCardGrid__img`} src={imgUrl} alt={name} />:
                 <SVG className={`passwordCardGrid__svg`} />}
             </div>
-            <h3 className={`passwordCardGrid__website`}>{website}</h3>
+            <h3 className={`passwordCardGrid__name`}>{name}</h3>
             <p className={`passwordCardGrid__email`}>{email}</p>
         </Link>
     )

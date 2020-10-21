@@ -44,25 +44,25 @@ const ManagePasswordForm = (props) => {
                 <div className={`managePasswordForm__item`}>
                     <label className={`managePasswordForm__label`}>Email: </label>
                     {!isEditable ?
-                    <><input className={`managePasswordForm__textField`} ref={register({required: true})} type="text" placeholder='Add a email...' value={displayEmail} name='email' />
-                    {!isAdd && <button type='button' onClick={e => handleCopy('email')}>Copy</button>}</> :
-                    <input className={`managePasswordForm__textField`} ref={register({required: true})} type="text" placeholder='Add a email...' defaultValue={displayEmail} name='email' />
+                    <><input className={`managePasswordForm__textField ${isAdd ? 'managePasswordForm__textField--edit' : ''}`} ref={register({required: true})} type="text" placeholder='Add a email...' value={displayEmail} name='email' />
+                    {!isAdd && displayEmail && <button className={`managePasswordForm__copy`} type='button' onClick={e => handleCopy('email')}>Copy</button>}</> :
+                    <input className={`managePasswordForm__textField managePasswordForm__textField--edit`} ref={register({required: true})} type="text" placeholder='Add a email...' defaultValue={displayEmail} name='email' />
                     }
                 </div>
                 <div className={`managePasswordForm__item`}>
                     <label className={`managePasswordForm__label`}>Login: </label>
                     {!isEditable ?
-                    <><input className={`managePasswordForm__textField`} ref={register} type="text" placeholder='Add login...' value={displayLogin} name='login' />
-                    {!isAdd && <button type='button' onClick={e => handleCopy('login')}>Copy</button>}</> :
-                    <input className={`managePasswordForm__textField`} ref={register} type="text" placeholder='Add login...' defaultValue={displayLogin} name='login' />
+                    <><input className={`managePasswordForm__textField ${isAdd ? 'managePasswordForm__textField--edit' : ''}`} ref={register} type="text" placeholder='Add login...' value={displayLogin} name='login' />
+                    {!isAdd && displayLogin && <button className={`managePasswordForm__copy`} type='button' onClick={e => handleCopy('login')}>Copy</button>}</> :
+                    <input className={`managePasswordForm__textField managePasswordForm__textField--edit`} ref={register} type="text" placeholder='Add login...' defaultValue={displayLogin} name='login' />
                     }
                 </div>
                 <div className={`managePasswordForm__item`}>
                     <label className={`managePasswordForm__label`}>Password: </label>
                     {!isEditable ?
-                    <><input className={`managePasswordForm__textField`} ref={register({required: true})} type="password" placeholder='Add password...' value={displayPassword} name='password' />
-                    {!isAdd && <button type='button' onClick={e => handleCopy('password')}>Copy</button>}</> :
-                    <input className={`managePasswordForm__textField`} ref={register({required: true})} type="password" placeholder='Add password...' defaultValue={displayPassword} name='password' />
+                    <><input className={`managePasswordForm__textField ${isAdd ? 'managePasswordForm__textField--edit' : ''}`} ref={register({required: true})} type="password" placeholder='Add password...' value={displayPassword} name='password' />
+                    {!isAdd && displayPassword && <button className={`managePasswordForm__copy`} type='button' onClick={e => handleCopy('password')}>Copy</button>}</> :
+                    <input className={`managePasswordForm__textField managePasswordForm__textField--edit`} ref={register({required: true})} type="password" placeholder='Add password...' defaultValue={displayPassword} name='password' />
                     }
                 </div>
             </div>
@@ -70,42 +70,42 @@ const ManagePasswordForm = (props) => {
                 <div className={`managePasswordForm__item`}>
                     <label className={`managePasswordForm__label`}>Website: </label>
                     {!isEditable ?
-                    <><input className={`managePasswordForm__textField`} ref={register({required: true})} type="text" placeholder='Add website...' value={displayWebsite} name='website' />
-                    {!isAdd && <button type='button' onClick={e => handleCopy('website')}>Copy</button>}</> :
-                    <input className={`managePasswordForm__textField`} ref={register({required: true})} type="text" placeholder='Add website...' defaultValue={displayWebsite} name='website' />
+                    <><input className={`managePasswordForm__textField ${isAdd ? 'managePasswordForm__textField--edit' : ''}`} ref={register({required: true})} type="text" placeholder='Add website...' value={displayWebsite} name='website' />
+                    {!isAdd && displayWebsite && <button className={`managePasswordForm__copy`} type='button' onClick={e => handleCopy('website')}>Copy</button>}</> :
+                    <input className={`managePasswordForm__textField managePasswordForm__textField--edit`} ref={register({required: true})} type="text" placeholder='Add website...' defaultValue={displayWebsite} name='website' />
                     }
                 </div>
                 <div className={`managePasswordForm__item`}>
                     <label className={`managePasswordForm__label`}>Name: </label>
                     {!isEditable ?
-                    <><input className={`managePasswordForm__textField`} ref={register({required: true})} type="text" placeholder='Add name...' value={displayName} name='name' />
-                    {!isAdd && <button type='button' onClick={e => handleCopy('name')}>Copy</button>}</> :
-                    <input className={`managePasswordForm__textField`} ref={register({required: true})} type="text" placeholder='Add name...' defaultValue={displayName} name='name' />
+                    <><input className={`managePasswordForm__textField ${isAdd ? 'managePasswordForm__textField--edit' : ''}`} ref={register({required: true})} type="text" placeholder='Add name...' value={displayName} name='name' />
+                    {!isAdd && displayName && <button className={`managePasswordForm__copy`} type='button' onClick={e => handleCopy('name')}>Copy</button>}</> :
+                    <input className={`managePasswordForm__textField managePasswordForm__textField--edit`} ref={register({required: true})} type="text" placeholder='Add name...' defaultValue={displayName} name='name' />
                     }
                 </div>
                 <div className={`managePasswordForm__item`}>
                     <label className={`managePasswordForm__label`}>Category: </label>
                     {!isEditable ?
-                    <><input className={`managePasswordForm__textField`} ref={register} type="text" placeholder='Add category...' value={displayCategory} name='category' />
-                    {!isAdd && <button type='button' onClick={e => handleCopy('category')}>Copy</button>}</> :
-                    <input className={`managePasswordForm__textField`} ref={register} type="text" placeholder='Add category...' defaultValue={displayCategory} name='category' />
+                    <><input className={`managePasswordForm__textField ${isAdd ? 'managePasswordForm__textField--edit' : ''}`} ref={register} type="text" placeholder='Add category...' value={displayCategory} name='category' />
+                    {!isAdd && displayCategory && <button className={`managePasswordForm__copy`} type='button' onClick={e => handleCopy('category')}>Copy</button>}</> :
+                    <input className={`managePasswordForm__textField managePasswordForm__textField--edit`} ref={register} type="text" placeholder='Add category...' defaultValue={displayCategory} name='category' />
                     }
                 </div>
                 <div className={`managePasswordForm__item`}>
                     <label className={`managePasswordForm__label`}>Note: </label>
                     {!isEditable ?
-                    <><input className={`managePasswordForm__textField`} ref={register} type="text" placeholder='Add a note...' value={displayNote} name='note' />
-                    {!isAdd && <button type='button' onClick={e => handleCopy('note')}>Copy</button>}</> :
-                    <input className={`managePasswordForm__textField`} ref={register} type="text" placeholder='Add a note...' defaultValue={displayNote} name='note' />
+                    <><input className={`managePasswordForm__textField ${isAdd ? 'managePasswordForm__textField--edit' : ''}`} ref={register} type="text" placeholder='Add a note...' value={displayNote} name='note' />
+                    {!isAdd && displayNote && <button className={`managePasswordForm__copy`} type='button' onClick={e => handleCopy('note')}>Copy</button>}</> :
+                    <input className={`managePasswordForm__textField managePasswordForm__textField--edit`} ref={register} type="text" placeholder='Add a note...' defaultValue={displayNote} name='note' />
                     }
                 </div>
             </div>
-            <div>
-                {isAdd && <input type='submit' />}
-                {!isAdd && !isEditable && <button type='button' onClick={e => setEditable(true)}>Edit</button>}
+            <div className={`managePasswordForm__manage`}>
+                {isAdd && <input className={`managePasswordForm__submit`} type='submit' />}
+                {!isAdd && !isEditable && <button className={`managePasswordForm__edit`} type='button' onClick={e => setEditable(true)}>Edit</button>}
                 {!isAdd && isEditable && <>
-                <input type='submit' value='Save' />
-                <button type='button' onClick={e => setEditable(false)}>Cancel</button>
+                <input className={`managePasswordForm__save`} type='submit' value='Save' />
+                <button className={`managePasswordForm__cancel`} type='button' onClick={e => setEditable(false)}>Cancel</button>
                 </>}
             </div>
         </form>
