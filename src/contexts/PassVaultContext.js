@@ -5,9 +5,12 @@ export const PassVaultContext = createContext()
 
 class PassVaultContextProvider extends Component {
     state = {
-        passwords: [
-        ],
-        view: 'grid'
+        passwords: [],
+        view: 'grid',
+        search: ''
+    }
+    setSearch = (value) => {
+        this.setState({search: value})
     }
 
     setImport = (data) => {
@@ -48,6 +51,7 @@ class PassVaultContextProvider extends Component {
                 value={{
                     ...this.state,
                     setView: this.setView,
+                    setSearch: this.setSearch,
                     setNewPassword: this.setNewPassword,
                     setImport: this.setImport,
                     getPasswordInfo: this.getPasswordInfo

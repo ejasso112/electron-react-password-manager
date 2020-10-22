@@ -18,8 +18,7 @@ import '../styles/ViewPasswords.scss'
 const ViewPasswords = (props) => {
     let [sortBy, SetSortBy] = React.useState('name')
     const contextData = React.useContext(PassVaultContext)
-    console.log(contextData.passwords)
-    
+
     const compareByName = (a, b) => {
         if (a.name < b.name) {
             return -1;
@@ -51,9 +50,9 @@ const ViewPasswords = (props) => {
     }
 
     console.log(sortBy)
-    const passwordsByName = [...contextData.passwords.sort(compareByName)]
-    const passwordsByCategory = [...contextData.passwords.sort(compareByCategory)]
-    const passwordsByEmail = [...contextData.passwords.sort(compareByEmail)]
+    const passwordsByName = [...contextData.passwords.sort(compareByName)].filter(name => name.name.includes(contextData.search))
+    const passwordsByCategory = [...contextData.passwords.sort(compareByCategory)].filter(name => name.name.includes(contextData.search))
+    const passwordsByEmail = [...contextData.passwords.sort(compareByEmail)].filter(name => name.name.includes(contextData.search))
 
     const sortedPasswords = sortBy === 'name' ? passwordsByName :
     sortBy === 'category' ? passwordsByCategory : passwordsByEmail
