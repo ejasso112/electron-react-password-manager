@@ -8,7 +8,6 @@ const PasswordCardList = (props) => {
     const id = props.data.id
     const imgUrl = props.data.urlSvg && props.data.urlSvg
     const SVG = !imgUrl && ImportSvg.Lock
-    const website = props.data.website
     const email = props.data.email
     const name = props.data.name
     const isActive = props.active

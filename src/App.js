@@ -7,6 +7,7 @@ import ManagePassword from './components/ManagePassword'
 
 import PassVaultContextProvider from './contexts/PassVaultContext';
 import './styles/_App.scss'
+import ViewPasswordGenerator from './views/ViewPasswordGenerator';
 
 const App = () => {
     return (
@@ -15,6 +16,7 @@ const App = () => {
                 <PassVaultContextProvider>
                     <Route path='/' component={ViewNav} />
                     <Route path={['/', '/password/:id']} exact component={ViewPasswords} />
+                    <Route path='/password-generator' exact component={ViewPasswordGenerator} />
                     <Route path='/password/:id' exact component={ManagePassword} />
                 </PassVaultContextProvider>
             </Router>

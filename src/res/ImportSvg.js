@@ -6,6 +6,7 @@ import {ReactComponent as Import} from './svg/Import.svg'
 import {ReactComponent as Lock} from './svg/Lock.svg'
 import {ReactComponent as LockAdd} from './svg/lockAdd.svg'
 import {ReactComponent as Settings} from './svg/Settings.svg'
+import {ReactComponent as Refresh} from './svg/Refresh.svg'
 
 const ImportSvg = {
     Add: Add,
@@ -15,7 +16,8 @@ const ImportSvg = {
     Import: Import,
     Lock: Lock,
     LockAdd: LockAdd,
-    Settings: Settings
+    Settings: Settings,
+    Refresh: Refresh
 }
 
 export default ImportSvg
