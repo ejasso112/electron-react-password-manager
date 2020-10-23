@@ -1,0 +1,18 @@
+.viewPrivacy {
+    &__head{
+        text-transform: uppercase;
+        font-family: Spartan;
+        font-weight: bold;
+        font-size: 1.1em;
+        color: #3B8ABE;
+        padding-bottom: 16px;
+    }
+
+    &__paragraph {
+        padding-bottom: 12px;
+        color: rgba($color: #000000, $alpha: .8);
+        &__span {
+            font-weight: 500;
+        }
+    }
+}

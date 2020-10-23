@@ -8,19 +8,15 @@ import '../styles/ViewNav.scss'
 
 const ViewNav = (props) => {
     const path = props.history.location.pathname
+
     return(
         <nav className={`viewNav`}>
             <div className={`viewNav__backgroundImg`} />
             <div className={`viewNav__main`}>
                 <div className={`viewNav__group`}>
                     <NavSearch />
-                    <NavLink to='/' svg={GetSvg.Lock} name='Passwords' isActive={path === '/'} />
+                    <NavLink to='/' svg={GetSvg.Lock} name='Passwords' isActive={path === '/' || path.includes('/password/')} />
                     <NavLink to='/password-generator' svg={GetSvg.LockAdd} name='Password Generator' isActive={path === '/password-generator'} />
-                </div>
-                <div className={`viewNav__group`}>
-                    <NavLink to='/import' svg={GetSvg.Import} name='Import' isActive={path === '/import'} />
-                    <NavLink to='/export' svg={GetSvg.Export} name='Export' isActive={path === '/export'} />
-                    <NavLink to='/settings' svg={GetSvg.Settings} name='Settings' isActive={path === '/settings'} />
                 </div>
             </div>
             <div className={`viewNav__footer`}>

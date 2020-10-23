@@ -49,10 +49,10 @@ const ViewPasswords = (props) => {
         return 0;
     }
 
-    console.log(sortBy)
-    const passwordsByName = [...contextData.passwords.sort(compareByName)].filter(name => name.name.includes(contextData.search))
-    const passwordsByCategory = [...contextData.passwords.sort(compareByCategory)].filter(name => name.name.includes(contextData.search))
-    const passwordsByEmail = [...contextData.passwords.sort(compareByEmail)].filter(name => name.name.includes(contextData.search))
+    //console.log(sortBy)
+    const passwordsByName = [...contextData.passwords].sort(compareByName).filter(name => name.name.includes(contextData.search))
+    const passwordsByCategory = [...contextData.passwords].sort(compareByCategory).filter(name => name.name.includes(contextData.search))
+    const passwordsByEmail = [...contextData.passwords].sort(compareByEmail).filter(name => name.name.includes(contextData.search))
 
     const sortedPasswords = sortBy === 'name' ? passwordsByName :
     sortBy === 'category' ? passwordsByCategory : passwordsByEmail

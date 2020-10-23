@@ -16,7 +16,7 @@ const ImportFile = (props) => {
     const updateData = (result) => {
         var data = result.data
         contextData.setImport(data)
-        console.log(data)
+        //console.log(data)
     }
 
     return (

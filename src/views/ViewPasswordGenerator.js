@@ -73,27 +73,27 @@ const ViewPasswordGenerator = props => {
             <div className={`viewPasswordGenerator__container__checkboxes`}>
                 <div className={`viewPasswordGenerator__item`}>
                     <input className={`viewPasswordGenerator__checkbox`} type="checkbox" onChange={(e) => (!isRequired() || !isSymbols) && setSymbols(e.target.checked)} checked={isSymbols} />
-                    <label className={`viewPasswordGenerator__label`}>Symbols</label>
+                    <label className={`viewPasswordGenerator__label`}>Symbols ( e.g. @#$% )</label>
                 </div>
                 <div className={`viewPasswordGenerator__item`}>
                     <input className={`viewPasswordGenerator__checkbox`} type="checkbox" onChange={(e) => (!isRequired() || !isNumbers) && setNumbers(e.target.checked)} checked={isNumbers} />
-                    <label className={`viewPasswordGenerator__label`}>Numbers</label>
+                    <label className={`viewPasswordGenerator__label`}>Numbers ( e.g. 123456 )</label>
                 </div>
                 <div className={`viewPasswordGenerator__item`}>
                     <input className={`viewPasswordGenerator__checkbox`} type="checkbox" onChange={(e) => (!isRequired() || !isLower) && setLower(e.target.checked)} checked={isLower} />
-                    <label className={`viewPasswordGenerator__label`}>Lowercase Characters</label>
+                    <label className={`viewPasswordGenerator__label`}>Lowercase Characters ( e.g. abcdefgh )</label>
                 </div>
                 <div className={`viewPasswordGenerator__item`}>
                     <input className={`viewPasswordGenerator__checkbox`} type="checkbox" onChange={(e) => (!isRequired() || !isUpper) && setUpper(e.target.checked)} checked={isUpper} />
-                    <label className={`viewPasswordGenerator__label`}>Uppercase Characters</label>
+                    <label className={`viewPasswordGenerator__label`}>Uppercase Characters ( e.g. ABCDEFGH )</label>
                 </div>
                 <div className={`viewPasswordGenerator__item`}>
                     <input className={`viewPasswordGenerator__checkbox`} type="checkbox" onChange={(e) => (!isRequired() || !isSimilar) && setSimilar(e.target.checked)} checked={isSimilar} />
-                    <label className={`viewPasswordGenerator__label`}>Similar Characters</label>
+                    <label className={`viewPasswordGenerator__label`}>Similar Characters ( e.g. i, l, 1, L, o, 0, O )</label>
                 </div>
                 <div className={`viewPasswordGenerator__item`}>
                     <input className={`viewPasswordGenerator__checkbox`} type="checkbox" onChange={(e) => (!isRequired() || !isAmbiguous) && setAmbiguous(e.target.checked)} checked={isAmbiguous} />
-                    <label className={`viewPasswordGenerator__label`}>Ambiguous Characters</label>
+                    <label className={`viewPasswordGenerator__label`}>Ambiguous Characters ( {`{ } [ ] ( ) / \\ ' " \` ~ , ; : . < >`} )</label>
                 </div>
             </div>
         </article>

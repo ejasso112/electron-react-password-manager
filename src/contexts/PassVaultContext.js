@@ -44,8 +44,19 @@ class PassVaultContextProvider extends Component {
         return filteredPassword
     }
 
+    handleDelete = (id) => {
+        const passwordsArray = [...this.state.passwords]
+
+        for(let i in passwordsArray) {
+            if(passwordsArray[i].id === id) {
+                passwordsArray.splice(i, 1);
+            }
+        }
+        
+        this.setState({passwords: passwordsArray})
+    }
+
     render() {
-        console.log()
         return (
             <PassVaultContext.Provider 
                 value={{
@@ -54,7 +65,8 @@ class PassVaultContextProvider extends Component {
                     setSearch: this.setSearch,
                     setNewPassword: this.setNewPassword,
                     setImport: this.setImport,
-                    getPasswordInfo: this.getPasswordInfo
+                    getPasswordInfo: this.getPasswordInfo,
+                    delete: this.handleDelete
                 }
             }>
                 {this.props.children}
